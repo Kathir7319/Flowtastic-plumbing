@@ -8,16 +8,14 @@
 ## 🌟 Key Features
 
 1. **Multi-Page Architecture (React Router v6)**:
-   - **Homepage (`/`)**: Hero section, Live emergency dispatch indicator, Core value propositions, Services highlights, **Infinite Running Google Reviews marquee**, Interactive Instant Cost Estimator, Interactive Zip Code Service Area lookup, FAQ accordion, and dual CTAs.
+   - **Homepage (`/`)**: Hero section, Live emergency dispatch indicator, Core value propositions, Services highlights, 4-Step Mobile Driveway Dispatch workflow, Interactive Instant Cost Estimator, Interactive Zip Code Service Area lookup, FAQ accordion, and dual CTAs.
    - **About Us (`/about`)**: Story & Mission, Morrisville roots, The Mobile Service Fleet advantage (no retail storefront overhead, direct to driveway), and our 4 core craftsmanship standards.
    - **Services (`/services`)**: In-depth breakdown of all 6 plumbing specializations (Residential Repair, Drain Cleaning & Hydro-Jetting, Water Heater Repair & Installation, Leak Detection, Fixture Upgrades, 24/7 Emergency Response) with symptom diagnostics and pricing estimates.
    - **Service Area (`/service-area`)**: Comprehensive breakdown of Morrisville (Core Hub), Cary, Raleigh, Durham, and Research Triangle Park (RTP) with an interactive zip code checker.
    - **Contact Us (`/contact`)**: Direct contact details (`+1 914-255-7684`, Morrisville, NC base, Mon-Fri 8:00 AM – 6:00 PM + 24/7 emergency availability) with an interactive booking & quote form.
 
-2. **Running Google Reviews Stream**:
-   - Continuous infinite-scroll marquee featuring authentic 5-star customer reviews across Morrisville, Cary, Raleigh, Durham, and RTP.
-   - Filterable by service category (Emergency, Water Heater, Drain, Leak Detection).
-   - Pauses smoothly on hover for reading.
+2. **The Flowtastic 4-Step Mobile Process**:
+   - Driveway dispatch model breakdown: Phone triage -> Driveway arrival -> 100% upfront quote -> Precision repair & immaculate clean-up.
 
 3. **Interactive Technology**:
    - **Instant Cost Estimator & Diagnostic Calculator**: Lets homeowners choose their issue, property type, and urgency to see real-time price ranges and book in one click.

@@ -50,10 +50,11 @@ export default function Navbar({ onOpenQuote }) {
           </div>
 
           <div className="flex items-center gap-4">
-            <div className="hidden sm:flex items-center gap-1.5 text-amber-400 font-semibold">
-              <span>★ 5.0 Google Rating</span>
+            <div className="hidden sm:flex items-center gap-1.5 text-emerald-400 font-semibold text-xs">
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span>NC Licensed Plumbers</span>
               <span className="text-slate-600">•</span>
-              <span className="text-slate-400 font-normal">148+ Reviews</span>
+              <span className="text-slate-300 font-medium">Upfront Flat Rates</span>
             </div>
 
             <a

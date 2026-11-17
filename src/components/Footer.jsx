@@ -21,11 +21,9 @@ export default function Footer({ onOpenQuote }) {
             </p>
 
             <div className="flex items-center gap-2 pt-2">
-              <div className="flex items-center gap-1 bg-slate-900 border border-slate-800 px-3 py-1.5 rounded-lg text-xs font-semibold text-amber-400">
-                <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
-                <span>5.0 Google Rating</span>
-                <span className="text-slate-500">•</span>
-                <span className="text-slate-300">148+ Reviews</span>
+              <div className="flex items-center gap-1.5 bg-slate-900 border border-slate-800 px-3 py-1.5 rounded-lg text-xs font-semibold text-cyan-400">
+                <Award className="w-3.5 h-3.5" />
+                <span>Upfront Flat-Rate Pricing</span>
               </div>
               <div className="flex items-center gap-1 bg-slate-900 border border-slate-800 px-3 py-1.5 rounded-lg text-xs font-semibold text-emerald-400">
                 <ShieldCheck className="w-3.5 h-3.5" />

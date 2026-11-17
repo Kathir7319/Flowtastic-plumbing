@@ -3,9 +3,8 @@ import { Link } from 'react-router-dom';
 import { 
   Phone, Sparkles, Clock, ShieldCheck, DollarSign, MapPin, 
   ChevronRight, Wrench, Flame, ShowerHead, SearchCheck, 
-  CheckCircle2, ArrowRight, Star, ThumbsUp, HelpCircle, Truck
+  CheckCircle2, ArrowRight, ThumbsUp, HelpCircle, Truck, Award
 } from 'lucide-react';
-import RunningReviews from '../components/RunningReviews';
 import CostEstimator from '../components/CostEstimator';
 import ZipCodeChecker from '../components/ZipCodeChecker';
 import { SERVICES } from '../data/services';
@@ -59,7 +58,7 @@ export default function HomePage({ onOpenQuote }) {
                 <span className="flex h-2 w-2 rounded-full bg-cyan-400 animate-pulse"></span>
                 <span>Morrisville & Triangle NC's Premier Plumbers</span>
                 <span className="text-slate-500">•</span>
-                <span className="text-amber-400 font-bold">★ 5.0 Rated</span>
+                <span className="text-emerald-400 font-bold">Licensed & Insured NC</span>
               </div>
 
               {/* Main Headline */}
@@ -375,8 +374,75 @@ export default function HomePage({ onOpenQuote }) {
         </div>
       </section>
 
-      {/* RUNNING GOOGLE REVIEWS SECTION (Required by user prompt) */}
-      <RunningReviews onOpenQuote={onOpenQuote} />
+      {/* HOW OUR MOBILE SERVICE WORKS */}
+      <section className="py-20 relative bg-gradient-to-b from-slate-950 via-slate-900/90 to-slate-950 border-y border-slate-800/80">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <span className="text-xs font-bold text-cyan-400 uppercase tracking-widest bg-cyan-950/60 px-3.5 py-1 rounded-full border border-cyan-800/40">
+              Direct to Your Driveway
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-white mt-3 tracking-tight">
+              How Flowtastic Mobile Plumbing Works
+            </h2>
+            <p className="mt-3 text-base text-slate-400">
+              No storefront visits needed. We dispatch fully-equipped service trucks directly to your property with complete parts inventory for single-visit fixes.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                step: "01",
+                title: "Fast Dispatch Call",
+                desc: "Call (914) 255-7684 or request an estimate online. Our Morrisville team triages your issue immediately.",
+                icon: Phone
+              },
+              {
+                step: "02",
+                title: "Driveway Arrival",
+                desc: "Our mobile truck arrives with optical sewer cameras, leak detectors, and thousands of replacement fittings.",
+                icon: Truck
+              },
+              {
+                step: "03",
+                title: "Upfront Firm Quote",
+                desc: "We diagnose the exact problem and provide a 100% upfront flat-rate quote. Zero surprise fees, ever.",
+                icon: DollarSign
+              },
+              {
+                step: "04",
+                title: "Precision Fix & Clean",
+                desc: "We complete the repair, test under full water pressure, and leave your workspace completely spotless.",
+                icon: ShieldCheck
+              }
+            ].map((st, i) => (
+              <div 
+                key={i}
+                className="relative p-7 rounded-3xl bg-slate-900/80 border border-slate-800/80 hover:border-cyan-500/40 transition-all duration-300 flex flex-col justify-between group shadow-xl"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-5">
+                    <span className="text-2xl font-black text-slate-700 group-hover:text-cyan-400/80 transition-colors">
+                      {st.step}
+                    </span>
+                    <div className="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <st.icon className="w-5 h-5" />
+                    </div>
+                  </div>
+
+                  <h3 className="text-lg font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">
+                    {st.title}
+                  </h3>
+
+                  <p className="text-sm text-slate-400 leading-relaxed">
+                    {st.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* INTERACTIVE INSTANT COST ESTIMATOR CALCULATOR */}
       <section className="py-20 relative">
