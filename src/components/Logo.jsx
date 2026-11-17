@@ -72,20 +72,20 @@ export default function Logo({ size = 'default', showTagline = true, lightMode =
       {/* Brand Typography */}
       <div className="flex flex-col">
         <div className="flex items-center tracking-tight">
-          <span className={`font-extrabold ${isSmall ? 'text-lg' : isLarge ? 'text-2xl' : 'text-xl'} text-white`}>
+          <span className={`font-extrabold ${isSmall ? 'text-lg' : isLarge ? 'text-2xl' : 'text-xl'} ${lightMode ? 'text-white' : 'text-slate-900'}`}>
             FLOW
           </span>
-          <span className={`font-extrabold ${isSmall ? 'text-lg' : isLarge ? 'text-2xl' : 'text-xl'} text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-sky-400`}>
+          <span className={`font-extrabold ${isSmall ? 'text-lg' : isLarge ? 'text-2xl' : 'text-xl'} ${lightMode ? 'text-cyan-400' : 'text-cyan-600'}`}>
             TASTIC
           </span>
         </div>
         
         <div className="flex items-center gap-1.5 -mt-0.5">
-          <span className="text-[10px] sm:text-[11px] font-bold tracking-[0.28em] text-slate-300 uppercase">
+          <span className={`text-[10px] sm:text-[11px] font-bold tracking-[0.28em] uppercase ${lightMode ? 'text-slate-400' : 'text-slate-500'}`}>
             PLUMBING
           </span>
           {showTagline && (
-            <span className="hidden sm:inline-block text-[9px] font-semibold text-cyan-400 tracking-wider">
+            <span className={`hidden sm:inline-block text-[9px] font-semibold tracking-wider ${lightMode ? 'text-cyan-400' : 'text-cyan-600'}`}>
               • MORRISVILLE, NC
             </span>
           )}

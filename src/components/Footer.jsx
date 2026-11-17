@@ -14,7 +14,7 @@ export default function Footer({ onOpenQuote }) {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8 mb-12">
           {/* Brand Info & Mission */}
           <div className="lg:col-span-2 space-y-4">
-            <Logo size="default" />
+            <Logo size="default" lightMode={true} />
             
             <p className="text-sm text-slate-400 leading-relaxed max-w-sm">
               Flowtastic Plumbing is a premier mobile service-area business based in Morrisville, NC. We provide top-flight residential and commercial plumbing repairs with unmatched integrity, upfront pricing, and prompt response times.

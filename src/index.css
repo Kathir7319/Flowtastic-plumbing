@@ -3,22 +3,22 @@
 @tailwind utilities;
 
 @layer base {
-  /* Default Theme: Fresh Emerald & Mint Jade */
+  /* Default Theme: Royal Blue & Ocean Azure (Bright, Clean, High-Trust) */
   :root {
-    --color-primary-50: 236 253 245;
-    --color-primary-100: 209 250 229;
-    --color-primary-200: 167 243 208;
-    --color-primary-300: 110 231 183;
-    --color-primary-400: 52 211 153;
-    --color-primary-500: 16 185 129;
-    --color-primary-600: 5 150 105;
-    --color-primary-700: 4 120 87;
-    --color-primary-800: 6 95 70;
-    --color-primary-900: 6 78 59;
-    --color-primary-950: 2 44 34;
-    --logo-primary: #34d399;
-    --logo-secondary: #059669;
-    --logo-glow: rgba(52, 211, 153, 0.4);
+    --color-primary-50: 239 246 255;
+    --color-primary-100: 219 234 254;
+    --color-primary-200: 191 219 254;
+    --color-primary-300: 147 197 253;
+    --color-primary-400: 96 165 250;
+    --color-primary-500: 37 99 235;
+    --color-primary-600: 29 78 216;
+    --color-primary-700: 30 64 175;
+    --color-primary-800: 30 58 138;
+    --color-primary-900: 23 37 84;
+    --color-primary-950: 15 23 42;
+    --logo-primary: #2563eb;
+    --logo-secondary: #0284c7;
+    --logo-glow: rgba(37, 99, 235, 0.3);
   }
 
   /* Amber & Copper Gold Theme */
@@ -34,12 +34,30 @@
     --color-primary-800: 146 64 14;
     --color-primary-900: 120 53 15;
     --color-primary-950: 69 26 3;
-    --logo-primary: #fbbf24;
+    --logo-primary: #f59e0b;
     --logo-secondary: #d97706;
-    --logo-glow: rgba(245, 158, 11, 0.4);
+    --logo-glow: rgba(245, 158, 11, 0.3);
   }
 
-  /* Royal Indigo & Sapphire Theme */
+  /* Fresh Emerald & Mint Jade Theme */
+  [data-theme="emerald"] {
+    --color-primary-50: 236 253 245;
+    --color-primary-100: 209 250 229;
+    --color-primary-200: 167 243 208;
+    --color-primary-300: 110 231 183;
+    --color-primary-400: 52 211 153;
+    --color-primary-500: 16 185 129;
+    --color-primary-600: 5 150 105;
+    --color-primary-700: 4 120 87;
+    --color-primary-800: 6 95 70;
+    --color-primary-900: 6 78 59;
+    --color-primary-950: 2 44 34;
+    --logo-primary: #10b981;
+    --logo-secondary: #059669;
+    --logo-glow: rgba(16, 185, 129, 0.3);
+  }
+
+  /* Royal Indigo Theme */
   [data-theme="indigo"] {
     --color-primary-50: 238 242 255;
     --color-primary-100: 224 231 255;
@@ -52,27 +70,9 @@
     --color-primary-800: 55 48 163;
     --color-primary-900: 49 46 129;
     --color-primary-950: 30 27 75;
-    --logo-primary: #818cf8;
+    --logo-primary: #6366f1;
     --logo-secondary: #4f46e5;
-    --logo-glow: rgba(99, 102, 241, 0.4);
-  }
-
-  /* Electric Cyan & Ocean Theme */
-  [data-theme="cyan"] {
-    --color-primary-50: 240 249 255;
-    --color-primary-100: 224 242 254;
-    --color-primary-200: 186 230 253;
-    --color-primary-300: 125 211 252;
-    --color-primary-400: 56 189 248;
-    --color-primary-500: 14 165 233;
-    --color-primary-600: 2 132 199;
-    --color-primary-700: 3 105 161;
-    --color-primary-800: 7 89 133;
-    --color-primary-900: 12 74 110;
-    --color-primary-950: 8 47 73;
-    --logo-primary: #38bdf8;
-    --logo-secondary: #0284c7;
-    --logo-glow: rgba(56, 189, 248, 0.4);
+    --logo-glow: rgba(99, 102, 241, 0.3);
   }
 
   /* Sunset Coral Theme */
@@ -88,9 +88,9 @@
     --color-primary-800: 159 18 57;
     --color-primary-900: 136 19 55;
     --color-primary-950: 76 5 25;
-    --logo-primary: #fb7185;
+    --logo-primary: #f43f5e;
     --logo-secondary: #e11d48;
-    --logo-glow: rgba(244, 63, 94, 0.4);
+    --logo-glow: rgba(244, 63, 94, 0.3);
   }
 
   html {
@@ -99,45 +99,44 @@
   }
   
   body {
-    background-color: #030712;
-    color: #f8fafc;
+    background-color: #f8fafc;
+    color: #0f172a;
     overflow-x: hidden;
   }
 }
 
-/* Custom glassmorphism and glow styles */
+/* Crisp Light Cards and Panels */
 .glass-panel {
-  background: rgba(15, 23, 42, 0.75);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(var(--color-primary-400), 0.15);
+  border: 1px solid rgba(226, 232, 240, 0.9);
 }
 
 .glass-card {
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(10, 25, 47, 0.6) 100%);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(var(--color-primary-400), 0.12);
+  background: #ffffff;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  box-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.05);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .glass-card:hover {
-  border-color: rgba(var(--color-primary-400), 0.4);
-  box-shadow: 0 12px 30px -10px rgba(var(--color-primary-600), 0.25);
+  border-color: rgba(var(--color-primary-500), 0.5);
+  box-shadow: 0 16px 32px -8px rgba(var(--color-primary-500), 0.15);
   transform: translateY(-3px);
 }
 
-/* Custom subtle scrollbar */
+/* Subtle scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #030712;
+  background: #f1f5f9;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1e293b;
+  background: #cbd5e1;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(var(--color-primary-600));
+  background: rgb(var(--color-primary-500));
 }

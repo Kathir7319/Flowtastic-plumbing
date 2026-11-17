@@ -76,29 +76,29 @@ export default function CostEstimator({ onBookService }) {
   const [selectedUrgency, setSelectedUrgency] = useState(ESTIMATOR_DATA.urgencyLevels[0]);
 
   return (
-    <div className="relative rounded-3xl bg-slate-900/90 border border-slate-800 p-6 sm:p-10 shadow-2xl overflow-hidden">
-      {/* Decorative gradients */}
+    <div className="relative rounded-3xl bg-white border border-slate-200/90 p-6 sm:p-10 shadow-xl overflow-hidden">
+      {/* Decorative ambient gradients */}
       <div className="absolute -top-32 -right-32 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
       <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
         {/* Left Column: Interactive Selectors */}
         <div className="w-full lg:w-7/12 space-y-6">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/70 border border-cyan-800/40 text-cyan-400 text-xs font-bold mb-3">
-              <Calculator className="w-3.5 h-3.5" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-50 border border-cyan-200 text-cyan-800 text-xs font-bold mb-3">
+              <Calculator className="w-3.5 h-3.5 text-cyan-600" />
               <span>Interactive Pricing Transparency</span>
             </div>
-            <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+            <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
               Instant Diagnostic & Estimate Calculator
             </h3>
-            <p className="text-sm text-slate-400 mt-1">
+            <p className="text-sm text-slate-600 mt-1">
               Select your issue and property type to calculate upfront estimate ranges before any technician arrives.
             </p>
           </div>
 
           {/* Issue Selector Grid */}
           <div>
-            <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2.5">
+            <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2.5">
               1. What plumbing issue are you facing?
             </label>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
@@ -108,13 +108,13 @@ export default function CostEstimator({ onBookService }) {
                   onClick={() => setSelectedIssue(item)}
                   className={`text-left p-3.5 rounded-2xl border transition-all text-sm font-semibold flex items-center justify-between ${
                     selectedIssue.id === item.id
-                      ? 'bg-cyan-950/80 border-cyan-400 text-white shadow-lg shadow-cyan-950/40'
-                      : 'bg-slate-950/60 border-slate-800 text-slate-300 hover:border-slate-700 hover:text-white'
+                      ? 'bg-cyan-50 border-cyan-500 text-cyan-900 shadow-sm'
+                      : 'bg-slate-50/80 border-slate-200 text-slate-700 hover:border-cyan-300 hover:bg-white'
                   }`}
                 >
                   <span className="truncate pr-2">{item.label}</span>
                   {selectedIssue.id === item.id && (
-                    <CheckCircle2 className="w-4 h-4 text-cyan-400 flex-shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-cyan-600 flex-shrink-0" />
                   )}
                 </button>
               ))}
@@ -123,7 +123,7 @@ export default function CostEstimator({ onBookService }) {
 
           {/* Property Type */}
           <div>
-            <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2.5">
+            <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2.5">
               2. Property Type
             </label>
             <div className="grid grid-cols-3 gap-2">
@@ -133,8 +133,8 @@ export default function CostEstimator({ onBookService }) {
                   onClick={() => setSelectedProperty(prop)}
                   className={`py-2.5 px-3 rounded-xl border text-center text-xs font-bold transition-all ${
                     selectedProperty.id === prop.id
-                      ? 'bg-cyan-500 text-slate-950 border-cyan-400 shadow-md'
-                      : 'bg-slate-950/60 border-slate-800 text-slate-400 hover:border-slate-700'
+                      ? 'bg-cyan-600 text-white border-cyan-600 shadow-sm'
+                      : 'bg-slate-50 border-slate-200 text-slate-600 hover:border-slate-300 hover:bg-white'
                   }`}
                 >
                   {prop.label}
@@ -145,7 +145,7 @@ export default function CostEstimator({ onBookService }) {
 
           {/* Urgency Level */}
           <div>
-            <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2.5">
+            <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2.5">
               3. Service Speed / Urgency
             </label>
             <div className="grid grid-cols-3 gap-2">
@@ -155,12 +155,12 @@ export default function CostEstimator({ onBookService }) {
                   onClick={() => setSelectedUrgency(urg)}
                   className={`py-2.5 px-3 rounded-xl border text-center transition-all ${
                     selectedUrgency.id === urg.id
-                      ? 'bg-cyan-950 border-cyan-400 text-white'
-                      : 'bg-slate-950/60 border-slate-800 text-slate-400 hover:border-slate-700'
+                      ? 'bg-cyan-50 border-cyan-500 text-cyan-900 shadow-xs'
+                      : 'bg-slate-50 border-slate-200 text-slate-600 hover:border-slate-300 hover:bg-white'
                   }`}
                 >
                   <div className="text-xs font-bold">{urg.label}</div>
-                  <div className="text-[10px] text-slate-400 mt-0.5">{urg.note}</div>
+                  <div className="text-[10px] text-slate-500 mt-0.5">{urg.note}</div>
                 </button>
               ))}
             </div>
@@ -168,19 +168,19 @@ export default function CostEstimator({ onBookService }) {
         </div>
 
         {/* Right Column: Calculated Transparent Breakdown Card */}
-        <div className="w-full lg:w-5/12 bg-slate-950/90 border border-cyan-500/30 rounded-3xl p-6 sm:p-8 shadow-2xl relative">
+        <div className="w-full lg:w-5/12 bg-slate-900 border border-slate-800 text-white rounded-3xl p-6 sm:p-8 shadow-2xl relative">
           <div className="flex items-center justify-between pb-4 border-b border-slate-800">
             <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">
               Calculated Estimate
             </span>
-            <span className="text-xs font-bold text-cyan-400 bg-cyan-950/80 px-2.5 py-0.5 rounded-full border border-cyan-800/40">
+            <span className="text-xs font-bold text-cyan-300 bg-cyan-950/80 px-2.5 py-0.5 rounded-full border border-cyan-800/60">
               Upfront Pricing Guaranteed
             </span>
           </div>
 
           <div className="py-6 text-center">
             <div className="text-xs text-slate-400 mb-1">Estimated Diagnostic & Repair Range:</div>
-            <div className="text-4xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-white">
+            <div className="text-4xl sm:text-5xl font-black text-white">
               {selectedIssue.baseRange}
             </div>
             <div className="text-xs text-emerald-400 font-semibold mt-2 flex items-center justify-center gap-1.5">
@@ -204,7 +204,7 @@ export default function CostEstimator({ onBookService }) {
             </div>
             <div className="pt-2">
               <span className="text-slate-400 block mb-1">What's Included:</span>
-              <p className="text-slate-300 italic text-[11px] leading-relaxed bg-slate-900/60 p-2.5 rounded-xl border border-slate-800/60">
+              <p className="text-slate-300 italic text-[11px] leading-relaxed bg-slate-950/60 p-2.5 rounded-xl border border-slate-800/80">
                 {selectedIssue.includes}
               </p>
             </div>
@@ -214,7 +214,7 @@ export default function CostEstimator({ onBookService }) {
           <div className="pt-6 space-y-3">
             <button
               onClick={() => onBookService(selectedIssue.category)}
-              className="w-full py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-sky-600 hover:from-cyan-400 hover:to-sky-500 text-slate-950 font-extrabold text-sm shadow-xl shadow-cyan-500/25 flex items-center justify-center gap-2 transition-all hover:scale-[1.01]"
+              className="w-full py-3.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-extrabold text-sm shadow-xl shadow-cyan-500/25 flex items-center justify-center gap-2 transition-all hover:scale-[1.01]"
             >
               <span>Book with This Estimate</span>
               <ArrowRight className="w-4 h-4" />
@@ -222,14 +222,14 @@ export default function CostEstimator({ onBookService }) {
 
             <a
               href="tel:+19142557684"
-              className="w-full py-2.5 rounded-xl bg-slate-900 hover:bg-slate-850 border border-slate-700/80 text-white font-bold text-xs flex items-center justify-center gap-2 transition-colors"
+              className="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-slate-750 border border-slate-700 text-white font-bold text-xs flex items-center justify-center gap-2 transition-colors"
             >
               <Phone className="w-3.5 h-3.5 text-cyan-400" />
               <span>Or Call for Immediate Dispatch: (914) 255-7684</span>
             </a>
           </div>
 
-          <div className="mt-4 text-center text-[10px] text-slate-500">
+          <div className="mt-4 text-center text-[10px] text-slate-400">
             Final exact quote provided upon in-person inspection before any work starts.
           </div>
         </div>
