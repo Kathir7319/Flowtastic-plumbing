@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
 import { Phone, Calendar, Clock, Menu, X, ShieldAlert, Sparkles, MapPin } from 'lucide-react';
 import Logo from './Logo';
+import ThemeSwitcher from './ThemeSwitcher';
 
 export default function Navbar({ onOpenQuote }) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -49,7 +50,7 @@ export default function Navbar({ onOpenQuote }) {
             </div>
           </div>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3 sm:gap-4">
             <div className="hidden sm:flex items-center gap-1.5 text-emerald-400 font-semibold text-xs">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
               <span>NC Licensed Plumbers</span>
@@ -64,6 +65,8 @@ export default function Navbar({ onOpenQuote }) {
               <Phone className="w-3 h-3 text-cyan-400" />
               <span>(914) 255-7684</span>
             </a>
+
+            <ThemeSwitcher />
           </div>
         </div>
       </div>

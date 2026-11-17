@@ -1,29 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 90" width="460" height="90">
   <defs>
     <linearGradient id="dropGradLogo" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#38BDF8"/>
-      <stop offset="50%" stop-color="#0284C7"/>
-      <stop offset="100%" stop-color="#034694"/>
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="50%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#047857"/>
     </linearGradient>
-    <linearGradient id="cyanLogo" x1="0%" y1="100%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#06B6D4"/>
-      <stop offset="50%" stop-color="#00E5FF"/>
-      <stop offset="100%" stop-color="#E0F2FE"/>
+    <linearGradient id="mintLogo" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="50%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#D1FAE5"/>
     </linearGradient>
     <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#FFFFFF"/>
-      <stop offset="60%" stop-color="#F0F9FF"/>
-      <stop offset="100%" stop-color="#38BDF8"/>
+      <stop offset="60%" stop-color="#F0FDF4"/>
+      <stop offset="100%" stop-color="#34D399"/>
     </linearGradient>
     <filter id="logoGlow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#00E5FF" flood-opacity="0.4"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#10B981" flood-opacity="0.4"/>
     </filter>
   </defs>
 
   <!-- Logo Mark -->
   <g transform="translate(10, 5)">
     <!-- Shield / Badge Base -->
-    <rect x="0" y="0" width="80" height="80" rx="22" fill="#0A192F" stroke="#00E5FF" stroke-width="2" />
+    <rect x="0" y="0" width="80" height="80" rx="22" fill="#061A14" stroke="#34D399" stroke-width="2" />
     
     <!-- Outer Pipe Curve -->
     <path d="M 24,56 C 16,48 16,34 26,26 C 35,18 45,18 54,26" 
@@ -31,7 +31,7 @@
 
     <!-- Water Drop Core -->
     <path d="M 40,20 C 40,20 28,36 28,47 C 28,54 33,60 40,60 C 47,60 52,54 52,47 C 52,36 40,20 40,20 Z" 
-          fill="url(#cyanLogo)" filter="url(#logoGlow)" />
+          fill="url(#mintLogo)" filter="url(#logoGlow)" />
           
     <ellipse cx="36" cy="38" rx="2.5" ry="4.5" transform="rotate(-20 36 38)" fill="#FFFFFF" opacity="0.8" />
   </g>
@@ -40,7 +40,7 @@
   <g transform="translate(106, 22)">
     <!-- Main Brand Name -->
     <text x="0" y="32" font-family="'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif" font-weight="900" font-size="34" letter-spacing="-0.5" fill="url(#textGrad)">
-      FLOW<tspan fill="#00E5FF">TASTIC</tspan>
+      FLOW<tspan fill="#34D399">TASTIC</tspan>
     </text>
     
     <!-- Subtitle / Discipline -->
@@ -49,7 +49,7 @@
     </text>
 
     <!-- Location & Badge Tagline -->
-    <text x="120" y="52" font-family="'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif" font-weight="600" font-size="10" letter-spacing="1" fill="#38BDF8">
+    <text x="120" y="52" font-family="'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif" font-weight="600" font-size="10" letter-spacing="1" fill="#34D399">
       • MORRISVILLE, NC
     </text>
   </g>

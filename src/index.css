@@ -3,6 +3,96 @@
 @tailwind utilities;
 
 @layer base {
+  /* Default Theme: Fresh Emerald & Mint Jade */
+  :root {
+    --color-primary-50: 236 253 245;
+    --color-primary-100: 209 250 229;
+    --color-primary-200: 167 243 208;
+    --color-primary-300: 110 231 183;
+    --color-primary-400: 52 211 153;
+    --color-primary-500: 16 185 129;
+    --color-primary-600: 5 150 105;
+    --color-primary-700: 4 120 87;
+    --color-primary-800: 6 95 70;
+    --color-primary-900: 6 78 59;
+    --color-primary-950: 2 44 34;
+    --logo-primary: #34d399;
+    --logo-secondary: #059669;
+    --logo-glow: rgba(52, 211, 153, 0.4);
+  }
+
+  /* Amber & Copper Gold Theme */
+  [data-theme="amber"] {
+    --color-primary-50: 255 251 235;
+    --color-primary-100: 254 243 199;
+    --color-primary-200: 253 230 138;
+    --color-primary-300: 252 211 77;
+    --color-primary-400: 251 191 36;
+    --color-primary-500: 245 158 11;
+    --color-primary-600: 217 119 6;
+    --color-primary-700: 180 83 9;
+    --color-primary-800: 146 64 14;
+    --color-primary-900: 120 53 15;
+    --color-primary-950: 69 26 3;
+    --logo-primary: #fbbf24;
+    --logo-secondary: #d97706;
+    --logo-glow: rgba(245, 158, 11, 0.4);
+  }
+
+  /* Royal Indigo & Sapphire Theme */
+  [data-theme="indigo"] {
+    --color-primary-50: 238 242 255;
+    --color-primary-100: 224 231 255;
+    --color-primary-200: 199 210 254;
+    --color-primary-300: 165 180 252;
+    --color-primary-400: 129 140 248;
+    --color-primary-500: 99 102 241;
+    --color-primary-600: 79 70 229;
+    --color-primary-700: 67 56 202;
+    --color-primary-800: 55 48 163;
+    --color-primary-900: 49 46 129;
+    --color-primary-950: 30 27 75;
+    --logo-primary: #818cf8;
+    --logo-secondary: #4f46e5;
+    --logo-glow: rgba(99, 102, 241, 0.4);
+  }
+
+  /* Electric Cyan & Ocean Theme */
+  [data-theme="cyan"] {
+    --color-primary-50: 240 249 255;
+    --color-primary-100: 224 242 254;
+    --color-primary-200: 186 230 253;
+    --color-primary-300: 125 211 252;
+    --color-primary-400: 56 189 248;
+    --color-primary-500: 14 165 233;
+    --color-primary-600: 2 132 199;
+    --color-primary-700: 3 105 161;
+    --color-primary-800: 7 89 133;
+    --color-primary-900: 12 74 110;
+    --color-primary-950: 8 47 73;
+    --logo-primary: #38bdf8;
+    --logo-secondary: #0284c7;
+    --logo-glow: rgba(56, 189, 248, 0.4);
+  }
+
+  /* Sunset Coral Theme */
+  [data-theme="coral"] {
+    --color-primary-50: 255 241 242;
+    --color-primary-100: 255 228 230;
+    --color-primary-200: 254 205 211;
+    --color-primary-300: 253 164 175;
+    --color-primary-400: 251 113 133;
+    --color-primary-500: 244 63 94;
+    --color-primary-600: 225 29 72;
+    --color-primary-700: 190 18 60;
+    --color-primary-800: 159 18 57;
+    --color-primary-900: 136 19 55;
+    --color-primary-950: 76 5 25;
+    --logo-primary: #fb7185;
+    --logo-secondary: #e11d48;
+    --logo-glow: rgba(244, 63, 94, 0.4);
+  }
+
   html {
     scroll-behavior: smooth;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
@@ -20,46 +110,21 @@
   background: rgba(15, 23, 42, 0.75);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(56, 189, 248, 0.15);
+  border: 1px solid rgba(var(--color-primary-400), 0.15);
 }
 
 .glass-card {
   background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(10, 25, 47, 0.6) 100%);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(var(--color-primary-400), 0.12);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .glass-card:hover {
-  border-color: rgba(0, 229, 255, 0.4);
-  box-shadow: 0 12px 30px -10px rgba(2, 132, 199, 0.25);
+  border-color: rgba(var(--color-primary-400), 0.4);
+  box-shadow: 0 12px 30px -10px rgba(var(--color-primary-600), 0.25);
   transform: translateY(-3px);
-}
-
-.glow-blue {
-  box-shadow: 0 0 25px rgba(2, 132, 199, 0.35);
-}
-
-.glow-cyan {
-  box-shadow: 0 0 30px rgba(0, 229, 255, 0.3);
-}
-
-.text-gradient {
-  background: linear-gradient(135deg, #ffffff 20%, #7dd3fc 60%, #00e5ff 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.text-gradient-cyan {
-  background: linear-gradient(135deg, #38bdf8 0%, #00e5ff 50%, #67e8f9 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* Marquee pause on hover */
-.marquee-container:hover .marquee-track {
-  animation-play-state: paused;
 }
 
 /* Custom subtle scrollbar */
@@ -74,5 +139,5 @@
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #0284c7;
+  background: rgb(var(--color-primary-600));
 }

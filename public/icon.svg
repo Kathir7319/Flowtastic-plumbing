@@ -1,14 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
   <defs>
     <linearGradient id="dropGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#38BDF8"/>
-      <stop offset="45%" stop-color="#0284C7"/>
-      <stop offset="100%" stop-color="#034694"/>
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="45%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#047857"/>
     </linearGradient>
-    <linearGradient id="cyanAccent" x1="0%" y1="100%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#06B6D4"/>
-      <stop offset="60%" stop-color="#00E5FF"/>
-      <stop offset="100%" stop-color="#E0F2FE"/>
+    <linearGradient id="mintAccent" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="60%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#D1FAE5"/>
     </linearGradient>
     <linearGradient id="pipeMetal" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#94A3B8"/>
@@ -16,11 +16,11 @@
       <stop offset="100%" stop-color="#64748B"/>
     </linearGradient>
     <linearGradient id="glowG" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00E5FF" stop-opacity="0.8"/>
-      <stop offset="100%" stop-color="#0284C7" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#34D399" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#059669" stop-opacity="0"/>
     </linearGradient>
     <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0284C7" flood-opacity="0.35"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#059669" flood-opacity="0.35"/>
     </filter>
   </defs>
 
@@ -28,7 +28,7 @@
   <circle cx="60" cy="60" r="48" fill="url(#glowG)" opacity="0.3" filter="blur(10px)"/>
 
   <!-- Hexagon/Shield Base Badge -->
-  <rect x="10" y="10" width="100" height="100" rx="28" fill="#0A192F" stroke="url(#dropGrad)" stroke-width="2.5" />
+  <rect x="10" y="10" width="100" height="100" rx="28" fill="#061A14" stroke="url(#dropGrad)" stroke-width="2.5" />
 
   <!-- Outer Interlocking Pipe Curve -->
   <path d="M 40,82 C 28,70 28,48 42,36 C 54,26 66,26 78,36" 
@@ -39,11 +39,11 @@
 
   <!-- Dynamic Water Drop Core -->
   <path d="M 60,30 C 60,30 42,52 42,68 C 42,78 50,86 60,86 C 70,86 78,78 78,68 C 78,52 60,30 60,30 Z" 
-        fill="url(#cyanAccent)" filter="url(#shadow)" />
+        fill="url(#mintAccent)" filter="url(#shadow)" />
 
   <!-- Inner Swirl Dynamic Wave -->
   <path d="M 50,70 C 52,62 58,60 62,64 C 66,68 72,66 74,60 C 74,72 68,78 60,78 C 55,78 51,75 50,70 Z" 
-        fill="#0284C7" opacity="0.9" />
+        fill="#047857" opacity="0.9" />
 
   <!-- Sparkling Hydro Specular Highlight -->
   <ellipse cx="53" cy="54" rx="4" ry="7" transform="rotate(-25 53 54)" fill="#FFFFFF" opacity="0.8" />

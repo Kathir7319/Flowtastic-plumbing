@@ -28,19 +28,19 @@ export default function Logo({ size = 'default', showTagline = true, lightMode =
               <stop offset="100%" stopColor="#082f49" />
             </linearGradient>
             <linearGradient id="pipeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#38bdf8" />
-              <stop offset="50%" stopColor="#0284c7" />
-              <stop offset="100%" stopColor="#0369a1" />
+              <stop offset="0%" stopColor="var(--logo-primary)" />
+              <stop offset="50%" stopColor="var(--logo-secondary)" />
+              <stop offset="100%" stopColor="#034694" />
             </linearGradient>
             <linearGradient id="cyanDrop" x1="0%" y1="100%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#06b6d4" />
-              <stop offset="60%" stopColor="#00e5ff" />
+              <stop offset="0%" stopColor="var(--logo-secondary)" />
+              <stop offset="60%" stopColor="var(--logo-primary)" />
               <stop offset="100%" stopColor="#e0f2fe" />
             </linearGradient>
           </defs>
 
           {/* Base Shield / Curved Badge */}
-          <rect x="6" y="6" width="88" height="88" rx="24" fill="url(#shieldGrad)" stroke="#00e5ff" strokeWidth="2.5" />
+          <rect x="6" y="6" width="88" height="88" rx="24" fill="url(#shieldGrad)" stroke="var(--logo-primary)" strokeWidth="2.5" />
           
           {/* Interlocking Pipe Arc */}
           <path 
