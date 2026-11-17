@@ -73,10 +73,10 @@ export default function ServicesPage({ onOpenQuote }) {
               id={srv.slug}
               className="p-8 sm:p-10 rounded-3xl bg-white border border-slate-200 hover:border-cyan-400 transition-all duration-300 shadow-sm hover:shadow-xl"
             >
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
                 
                 {/* Left Overview Column */}
-                <div className="lg:col-span-7 space-y-5">
+                <div className="lg:col-span-7 space-y-5 flex flex-col justify-between">
                   <div className="flex flex-wrap items-center gap-2.5">
                     <span className="text-xs font-bold text-cyan-800 bg-cyan-50 px-3 py-1 rounded-full border border-cyan-200">
                       {srv.badge}
@@ -112,7 +112,7 @@ export default function ServicesPage({ onOpenQuote }) {
                 </div>
 
                 {/* Right Action & Diagnostic Box */}
-                <div className="lg:col-span-5 bg-slate-50 border border-slate-200 rounded-2xl p-6 sm:p-7 space-y-5">
+                <div className="lg:col-span-5 bg-slate-50 border border-slate-200 rounded-2xl p-6 sm:p-7 space-y-5 flex flex-col justify-between">
                   {/* Common Symptoms / Signs */}
                   <div>
                     <h4 className="text-xs font-bold text-amber-800 uppercase tracking-wider mb-2 flex items-center gap-1.5">

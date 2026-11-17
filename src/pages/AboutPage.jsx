@@ -160,11 +160,11 @@ export default function AboutPage({ onOpenQuote }) {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
             {standards.map((s, idx) => (
               <div 
                 key={idx}
-                className="p-7 rounded-3xl bg-white border border-slate-200 hover:border-cyan-400 transition-all duration-300 flex flex-col justify-between hover:-translate-y-1 group shadow-xs hover:shadow-lg"
+                className="p-7 rounded-3xl bg-white border border-slate-200 hover:border-cyan-400 transition-all duration-300 flex flex-col justify-between h-full hover:-translate-y-1 group shadow-xs hover:shadow-lg"
               >
                 <div>
                   <div className="w-12 h-12 rounded-2xl bg-cyan-50 text-cyan-600 border border-cyan-100 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">

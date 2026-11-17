@@ -80,9 +80,9 @@ export default function CostEstimator({ onBookService }) {
       {/* Decorative ambient gradients */}
       <div className="absolute -top-32 -right-32 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
-      <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
+      <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-stretch">
         {/* Left Column: Interactive Selectors */}
-        <div className="w-full lg:w-7/12 space-y-6">
+        <div className="w-full lg:w-7/12 space-y-6 flex flex-col justify-between">
           <div>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-50 border border-cyan-200 text-cyan-800 text-xs font-bold mb-3">
               <Calculator className="w-3.5 h-3.5 text-cyan-600" />
@@ -106,7 +106,7 @@ export default function CostEstimator({ onBookService }) {
                 <button
                   key={item.id}
                   onClick={() => setSelectedIssue(item)}
-                  className={`text-left p-3.5 rounded-2xl border transition-all text-sm font-semibold flex items-center justify-between ${
+                  className={`text-left p-3.5 rounded-2xl border transition-all text-sm font-semibold flex items-center justify-between min-h-[56px] ${
                     selectedIssue.id === item.id
                       ? 'bg-cyan-50 border-cyan-500 text-cyan-900 shadow-sm'
                       : 'bg-slate-50/80 border-slate-200 text-slate-700 hover:border-cyan-300 hover:bg-white'
@@ -168,7 +168,7 @@ export default function CostEstimator({ onBookService }) {
         </div>
 
         {/* Right Column: Calculated Transparent Breakdown Card */}
-        <div className="w-full lg:w-5/12 bg-slate-900 border border-slate-800 text-white rounded-3xl p-6 sm:p-8 shadow-2xl relative">
+        <div className="w-full lg:w-5/12 bg-slate-900 border border-slate-800 text-white rounded-3xl p-6 sm:p-8 shadow-2xl relative flex flex-col justify-between">
           <div className="flex items-center justify-between pb-4 border-b border-slate-800">
             <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">
               Calculated Estimate

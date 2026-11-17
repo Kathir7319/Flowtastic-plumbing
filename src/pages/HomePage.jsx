@@ -198,57 +198,65 @@ export default function HomePage({ onOpenQuote }) {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
             {/* Value Prop 1 */}
-            <div className="p-7 rounded-3xl bg-slate-50 border border-slate-200 hover:border-cyan-400 hover:bg-white hover:-translate-y-1.5 transition-all duration-300 group shadow-xs hover:shadow-lg">
-              <div className="w-12 h-12 rounded-2xl bg-cyan-100 text-cyan-700 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                <Clock className="w-6 h-6" />
+            <div className="p-7 rounded-3xl bg-slate-50 border border-slate-200 hover:border-cyan-400 hover:bg-white hover:-translate-y-1.5 transition-all duration-300 group shadow-xs hover:shadow-lg h-full flex flex-col justify-between">
+              <div>
+                <div className="w-12 h-12 rounded-2xl bg-cyan-100 text-cyan-700 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                  <Clock className="w-6 h-6" />
+                </div>
+                <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-cyan-700 transition-colors">
+                  Prompt Emergency Response
+                </h3>
+                <p className="text-sm text-slate-600 leading-relaxed">
+                  Available for emergencies when plumbing disasters strike. Stationed mobile trucks mean we arrive fast to stop water damage before it ruins your home.
+                </p>
               </div>
-              <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-cyan-700 transition-colors">
-                Prompt Emergency Response
-              </h3>
-              <p className="text-sm text-slate-600 leading-relaxed">
-                Available for emergencies when plumbing disasters strike. Stationed mobile trucks mean we arrive fast to stop water damage before it ruins your home.
-              </p>
             </div>
 
             {/* Value Prop 2 */}
-            <div className="p-7 rounded-3xl bg-slate-50 border border-slate-200 hover:border-cyan-400 hover:bg-white hover:-translate-y-1.5 transition-all duration-300 group shadow-xs hover:shadow-lg">
-              <div className="w-12 h-12 rounded-2xl bg-cyan-100 text-cyan-700 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                <ShieldCheck className="w-6 h-6" />
+            <div className="p-7 rounded-3xl bg-slate-50 border border-slate-200 hover:border-cyan-400 hover:bg-white hover:-translate-y-1.5 transition-all duration-300 group shadow-xs hover:shadow-lg h-full flex flex-col justify-between">
+              <div>
+                <div className="w-12 h-12 rounded-2xl bg-cyan-100 text-cyan-700 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                  <ShieldCheck className="w-6 h-6" />
+                </div>
+                <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-cyan-700 transition-colors">
+                  Expert & Licensed Technicians
+                </h3>
+                <p className="text-sm text-slate-600 leading-relaxed">
+                  Highly experienced plumbers ensuring jobs are done right the first time. We adhere to strict NC Uniform Plumbing Codes and modern trade standards.
+                </p>
               </div>
-              <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-cyan-700 transition-colors">
-                Expert & Licensed Technicians
-              </h3>
-              <p className="text-sm text-slate-600 leading-relaxed">
-                Highly experienced plumbers ensuring jobs are done right the first time. We adhere to strict NC Uniform Plumbing Codes and modern trade standards.
-              </p>
             </div>
 
             {/* Value Prop 3 */}
-            <div className="p-7 rounded-3xl bg-slate-50 border border-slate-200 hover:border-cyan-400 hover:bg-white hover:-translate-y-1.5 transition-all duration-300 group shadow-xs hover:shadow-lg">
-              <div className="w-12 h-12 rounded-2xl bg-cyan-100 text-cyan-700 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                <DollarSign className="w-6 h-6" />
+            <div className="p-7 rounded-3xl bg-slate-50 border border-slate-200 hover:border-cyan-400 hover:bg-white hover:-translate-y-1.5 transition-all duration-300 group shadow-xs hover:shadow-lg h-full flex flex-col justify-between">
+              <div>
+                <div className="w-12 h-12 rounded-2xl bg-cyan-100 text-cyan-700 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                  <DollarSign className="w-6 h-6" />
+                </div>
+                <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-cyan-700 transition-colors">
+                  Honest, Upfront Pricing
+                </h3>
+                <p className="text-sm text-slate-600 leading-relaxed">
+                  No hidden fees—just upfront, transparent pricing before work begins. You approve the exact line item estimate before any wrench is turned.
+                </p>
               </div>
-              <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-cyan-700 transition-colors">
-                Honest, Upfront Pricing
-              </h3>
-              <p className="text-sm text-slate-600 leading-relaxed">
-                No hidden fees—just upfront, transparent pricing before work begins. You approve the exact line item estimate before any wrench is turned.
-              </p>
             </div>
 
             {/* Value Prop 4 */}
-            <div className="p-7 rounded-3xl bg-slate-50 border border-slate-200 hover:border-cyan-400 hover:bg-white hover:-translate-y-1.5 transition-all duration-300 group shadow-xs hover:shadow-lg">
-              <div className="w-12 h-12 rounded-2xl bg-cyan-100 text-cyan-700 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                <MapPin className="w-6 h-6" />
+            <div className="p-7 rounded-3xl bg-slate-50 border border-slate-200 hover:border-cyan-400 hover:bg-white hover:-translate-y-1.5 transition-all duration-300 group shadow-xs hover:shadow-lg h-full flex flex-col justify-between">
+              <div>
+                <div className="w-12 h-12 rounded-2xl bg-cyan-100 text-cyan-700 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                  <MapPin className="w-6 h-6" />
+                </div>
+                <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-cyan-700 transition-colors">
+                  Locally Owned & Operated
+                </h3>
+                <p className="text-sm text-slate-600 leading-relaxed">
+                  Proudly serving homeowners and businesses throughout the Morrisville community. We live, shop, and raise our families right here in the Triangle.
+                </p>
               </div>
-              <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-cyan-700 transition-colors">
-                Locally Owned & Operated
-              </h3>
-              <p className="text-sm text-slate-600 leading-relaxed">
-                Proudly serving homeowners and businesses throughout the Morrisville community. We live, shop, and raise our families right here in the Triangle.
-              </p>
             </div>
           </div>
         </div>
@@ -279,11 +287,11 @@ export default function HomePage({ onOpenQuote }) {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
             {SERVICES.slice(0, 5).map((srv) => (
               <div
                 key={srv.id}
-                className="p-7 rounded-3xl bg-white border border-slate-200 hover:border-cyan-400 transition-all duration-300 flex flex-col justify-between group shadow-xs hover:shadow-xl hover:-translate-y-1"
+                className="p-7 rounded-3xl bg-white border border-slate-200 hover:border-cyan-400 transition-all duration-300 flex flex-col justify-between h-full group shadow-xs hover:shadow-xl hover:-translate-y-1"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
@@ -312,7 +320,7 @@ export default function HomePage({ onOpenQuote }) {
                   </div>
                 </div>
 
-                <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
+                <div className="pt-4 border-t border-slate-100 flex items-center justify-between mt-auto">
                   <span className="text-xs font-bold text-slate-700">
                     {srv.pricingEstimate.split('|')[0]}
                   </span>
@@ -328,7 +336,7 @@ export default function HomePage({ onOpenQuote }) {
             ))}
 
             {/* 6th Card: 24/7 Emergency Card */}
-            <div className="p-7 rounded-3xl bg-gradient-to-br from-slate-900 to-slate-950 text-white border border-slate-800 flex flex-col justify-between shadow-xl relative overflow-hidden group">
+            <div className="p-7 rounded-3xl bg-gradient-to-br from-slate-900 to-slate-950 text-white border border-slate-800 flex flex-col justify-between h-full shadow-xl relative overflow-hidden group">
               <div>
                 <span className="text-[11px] font-bold text-amber-400 bg-amber-950/80 px-2.5 py-0.5 rounded-full border border-amber-800/40 inline-block mb-4">
                   🚨 24/7 Priority Emergency
@@ -379,7 +387,7 @@ export default function HomePage({ onOpenQuote }) {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
             {[
               {
                 step: "01",
@@ -408,7 +416,7 @@ export default function HomePage({ onOpenQuote }) {
             ].map((st, i) => (
               <div 
                 key={i}
-                className="relative p-7 rounded-3xl bg-slate-50 border border-slate-200 hover:border-cyan-400 hover:bg-white transition-all duration-300 flex flex-col justify-between group shadow-xs hover:shadow-lg"
+                className="relative p-7 rounded-3xl bg-slate-50 border border-slate-200 hover:border-cyan-400 hover:bg-white transition-all duration-300 flex flex-col justify-between h-full group shadow-xs hover:shadow-lg"
               >
                 <div>
                   <div className="flex items-center justify-between mb-5">

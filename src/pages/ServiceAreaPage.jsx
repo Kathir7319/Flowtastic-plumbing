@@ -50,11 +50,11 @@ export default function ServiceAreaPage({ onOpenQuote }) {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
             {SERVICE_AREAS.map((area) => (
               <div
                 key={area.id}
-                className={`p-7 rounded-3xl bg-slate-50 border transition-all duration-300 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1.5 ${
+                className={`p-7 rounded-3xl bg-slate-50 border transition-all duration-300 flex flex-col justify-between h-full shadow-xs hover:shadow-xl hover:-translate-y-1.5 ${
                   area.id === 'morrisville'
                     ? 'border-cyan-500 bg-white ring-2 ring-cyan-500/20 shadow-md'
                     : 'border-slate-200 hover:border-cyan-400 hover:bg-white'
@@ -125,7 +125,7 @@ export default function ServiceAreaPage({ onOpenQuote }) {
             ))}
 
             {/* Additional Info Card */}
-            <div className="p-7 rounded-3xl bg-slate-900 text-white border border-slate-800 flex flex-col justify-between shadow-xl">
+            <div className="p-7 rounded-3xl bg-slate-900 text-white border border-slate-800 flex flex-col justify-between h-full shadow-xl">
               <div>
                 <span className="text-xs font-bold text-cyan-400 uppercase tracking-wider block mb-3">
                   Have a Property Nearby?
